@@ -30,6 +30,30 @@ public class kalulators {
 		int[] svars = new int[kritSk];
 		int[][] vertejums = new int[studSk][kritSk];
 		double[] semestrs = new double[studSk];
+		
+		scan.nextLine();
+		for(int i=0; i<studenti.length; i++) {
+			do {
+				System.out.println("Ievadi "+(i+1)+". studenta vardu");
+				studenti[i] = scan.nextLine().trim();
+			}while(!studenti[i].matches("^[\\p{L} ]+$"));
+			
+		}
+		
+	
+	for(int i=0; i<kriteriji.length; i++) {
+		do {
+			System.out.println("Ievadi "+(i+1)+". kriteriju");
+			kriteriji[i] = scan.nextLine().trim();
+		}while(!kriteriji[i].matches("^[\\p{L} ]+$"));
+		
+		System.out.println("Ievadi "+(i+1)+". kriterija svaru");
+		while(!scan.hasNextInt()) {
+			System.out.println("Ievadi "+(i+1)+". kriterija svaru");
+			scan.next();
+		}
+		svars[i] = scan.nextInt();
+		
 	}
-
+}
 }
