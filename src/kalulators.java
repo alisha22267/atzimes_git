@@ -39,6 +39,7 @@ public class kalulators {
 			}while(!studenti[i].matches("^[\\p{L} ]+$"));
 			
 		}
+		// Perakstit masivu
 		
 	
 	for(int i=0; i<kriteriji.length; i++) {
